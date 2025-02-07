@@ -19,13 +19,14 @@
         }
 
         h1 {
+            margin-top: 80px;
             color: #ff3366;
         }
 
         #nao {
             font-size: 24px;
             color: #333;
-            background-color: transparent;
+            background-color: rgba(255, 231, 254, 0.281);
             border: none;
             cursor: pointer;
             position: absolute;
@@ -39,11 +40,28 @@
             height: 50px;
             cursor: pointer;
         }
+
+        img {
+            width: 200px;
+            
+        }
+
+        #content2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #btn {
+            margin-top: 20px;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="content">
         <h1>Um Pedido de Namoro Especial</h1>
+        <img src="Imagem do WhatsApp de 2025-02-06 à(s) 22.17.17_a53a2d78.jpg" alt="">
         <p>Olá amor ❤️</p>
         <p>Quero dizer que você ilumina minha vida como ninguém mais.</p>
         <p>Você aceita namorar comigo?</p>
@@ -51,11 +69,18 @@
         <button id="nao" onclick="mudarPosicao()">Não</button>
         <p id="resposta" style="display: none;"></p>
     </div>
+    <div id="content2">
+        <h1>❤️ Eba ❤️</h1>
+        <img src="Imagem do WhatsApp de 2025-02-06 à(s) 22.21.26_b7a85c13.jpg" alt="">
+        <a href="https://wa.me/5534999461770"><button id="btn">Falar com sua amada</button></a>
+    </div>
     <script>
         function mostrarResposta() {
             document.getElementById('resposta').style.display = 'block';
             document.getElementById('resposta').innerHTML = 'Sim! Eu aceito, meu amor. ❤️';
             document.getElementById('nao').style.display = 'none';
+            document.getElementById('content').style.display = 'none';
+            document.getElementById('content2').style.display = 'flex';
         }
 
         function mudarPosicao() {
